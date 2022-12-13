@@ -23,8 +23,7 @@ for (let i = 9; i < 18; i++) {
 }
 // function that reassigns classes for the past, present, future
 function colorChange(i){
-  console.log(currentHour+ "stuff1");
-  console.log(i + "stuff2");
+
   if (currentHour < i) {
     $(`#hour-${i}`).removeClass('past')
     $(`#hour-${i}`).removeClass('present')
@@ -43,10 +42,9 @@ saveBtn.each(function(){
 $(this).on('click', function(){
 var localName = ($(this).parent().attr('id'));
 var localInput =  ($(this).siblings('textarea').val());
-console.log(localName);
-console.log(localInput);
+
 localStorage.setItem(localName,localInput);
-console.log(localStorage.getItem(localName))
+
  })
  });
 };
