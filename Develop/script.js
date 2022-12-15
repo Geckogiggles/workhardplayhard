@@ -16,10 +16,9 @@ readWorkTimesFromStorage();
 function readWorkTimesFromStorage() {
 //Loops through all the time slots so that not only the first block works
 for (let i = 9; i < 18; i++) {
-
+  var workTimeSlot = localStorage.getItem(`hour-${i}`);
   $(`#hour-${i}`).children('textarea').val(workTimeSlot);
   colorChange(i);
-  var workTimeSlot = localStorage.getItem(`hour-${i}`);
 }
 // function that reassigns classes for the past, present, future
 function colorChange(i){
